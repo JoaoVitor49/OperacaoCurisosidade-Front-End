@@ -1,0 +1,26 @@
+.container{
+    display: grid;
+    grid-template-columns: minmax(150px,340px) 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "nav header"
+    "nav main";
+    height: 100vh;
+    background-color: var(--bg-primary);
+    overflow-y: hidden;
+}
+
+.header-area {
+    grid-area: header;
+    margin: 1rem;
+}
+
+.sidebar-area {
+    grid-area: nav;
+}
+
+.content{
+    grid-area: main;
+    margin: 0 1rem 0.5rem 1rem;
+    overflow-y: auto;
+}

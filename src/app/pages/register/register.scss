@@ -1,0 +1,13 @@
+.container{
+    background-color: var(--bg-container-primary);
+    border-radius: 8px;
+    height: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-primary);
+    overflow-y: auto;
+}
+
+app-main-button{
+    --bg-button-main: var(--bg-button-register);
+    --bg-button-main-hover: var(--bg-button-register-hover);
+}

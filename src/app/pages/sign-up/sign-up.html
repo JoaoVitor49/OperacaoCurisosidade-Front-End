@@ -1,0 +1,28 @@
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="name">
+        @if(signUpForm.get('name')?.hasError('required')){
+        <mat-error>Nome é obrigatório</mat-error>
+        }
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+        @if(signUpForm.get('email')?.hasError('required')){
+        <mat-error>Email é obrigatório</mat-error>
+        }
+        @if(signUpForm.get('email')?.hasError('email')){
+        <mat-error>Formato de email inválido</mat-error>
+        }
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Senha</mat-label>
+        <input matInput formControlName="password" type="password">
+        @if(signUpForm.get('password')?.hasError('required')){
+        <mat-error>Senha é obrigatória</mat-error>
+        }
+    </mat-form-field>
+    <span>Já possui uma conta? <a routerLink="/login">Faça login</a></span>
+    <app-auth-button label="CADASTRAR" [isLoading]="isLoading" loadingLabel="CRIANDO CONTA..." class="full-width"></app-auth-button>
+</form>

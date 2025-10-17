@@ -1,0 +1,20 @@
+.oc-container{
+    background-color: var(--bg-logo-sidebar);
+    color: var(--text-logo-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 1.75rem;
+}
+
+.oc-text{
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.oc-description{
+    font-size: 14px;
+    font-weight: 400;
+}

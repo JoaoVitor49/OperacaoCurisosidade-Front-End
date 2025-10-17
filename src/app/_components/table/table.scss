@@ -1,0 +1,54 @@
+.mat-mdc-table {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.mat-mdc-row {
+    background-color: var(--bg-table-row);
+    transition: all 0.2s ease;
+}
+
+.mat-mdc-row:hover {
+    background-color: var(--item-hover);
+    color: var(--item-text-hover);
+    transform: translateY(-3px);
+}
+
+.mat-mdc-header-row {
+    background-color: var(--bg-table-header);
+}
+
+td.active{
+    color: var(--text-active);
+}
+
+td.inactive{
+    color: var(--text-inactive);
+}
+
+th:hover:not(.action){
+    background-color: var(--item-hover);
+    color: var(--item-text-hover);
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.mat-mdc-cell{
+    white-space: nowrap;
+}
+
+.link{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.row-clickable {
+    cursor: pointer;
+}
+
+mat-paginator {
+    margin-top: 0.5rem;
+}

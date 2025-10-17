@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+span{
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+.switch{
+    width: 60px;
+    height: 30px;
+    background-color: var(--bg-toggle);
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.switch:hover{
+    background-color: var(--bg-toggle-hover);
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+    background-color: var(--bg-toggle-icon);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: var(--toggle-left-px);
+    transition: all 0.3s ease-in;
+    color: var(--toggle-icon);
+}

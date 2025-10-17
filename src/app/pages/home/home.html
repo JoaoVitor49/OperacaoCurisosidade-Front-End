@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="boxes">
+        <app-boxes class="box" [value]="totalClients()" label="Total de Cadastro"
+            style="--box-text-color: var(--box-text-primary)" (click)="applyFilter('total')"
+            [class.active]="activeFilter() === 'total'"></app-boxes>
+        <app-boxes class="box" [value]="lastMonthClients()" label="Cadastros no último mês"
+            style="--box-text-color: var(--box-text-secondary)" (click)="applyFilter('lastMonth')"
+            [class.active]="activeFilter() === 'lastMonth'"></app-boxes>
+        <app-boxes class="box" [value]="inactiveClients()" label="Cadastros com pendência de revisão"
+            style="--box-text-color: var(--box-text-tertiary)" (click)="applyFilter('inactives')"
+            [class.active]="activeFilter() === 'inactives'"></app-boxes>
+    </div>
+    <div class="content">
+        <span class="title">Ultimos Cadastrados</span>
+        <ng-template #statusTmpl let-item>
+            <app-status-cell [status]="item.isActive"></app-status-cell>
+        </ng-template>
+        <app-table [columns]="dashboardColumns" [data]="clients()" [totalItems]="totalPaginator()"
+            [customTemplate]="{ isActive: statusTmpl }" (pageChange)="onPageChange($event)" (sortChange)="onSortChange($event)"></app-table>
+    </div>
+</div>

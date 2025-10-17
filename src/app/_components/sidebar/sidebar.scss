@@ -1,0 +1,39 @@
+.container{
+    background-color: var(--bg-container-primary);
+    padding: 1rem;
+    height: 100%;
+    border-radius: 8px;
+    border-right: 2px solid var(--border-primary);
+    box-sizing: border-box;
+}
+
+.oc-container{
+    background-color: var(--bg-logo-sidebar);
+    color: var(--text-logo-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 1.75rem;
+}
+
+.oc-text{
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.oc-description{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+nav{
+    margin-top: 2rem;
+}
+
+.menu-list{
+    list-style: none;
+    padding: 0;
+    color: var(--text-primary);
+}

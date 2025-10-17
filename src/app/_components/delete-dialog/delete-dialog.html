@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 mat-dialog-title class="title">Confirmar Exclusão</h1>
+    <mat-dialog-content>
+        <p>Você tem certeza que deseja deletar o cliente <strong>{{ matDialogData }}</strong>?</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button class="cancel-button" (click)="onCancel()">Cancelar</button>
+        <button class="confirm-button" (click)="onConfirm()">Deletar</button>
+    </mat-dialog-actions>
+</div>

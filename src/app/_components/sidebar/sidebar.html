@@ -1,0 +1,10 @@
+<div class="container">
+    <app-logo-rectangle></app-logo-rectangle>
+    <nav>
+        <ul class="menu-list">
+            <app-menu-item route="/home" icon="home" label="Home" [currentRoute]="currentRoute()"></app-menu-item>
+            <app-menu-item route="/register" icon="person_add" label="Cadastro" [currentRoute]="currentRoute()"></app-menu-item>
+            <app-menu-item route="/report" icon="insert_chart" label="Relatórios" [currentRoute]="currentRoute()" [activeOn]="['/clientList', '/logList']"></app-menu-item>
+        </ul>
+    </nav>
+</div>

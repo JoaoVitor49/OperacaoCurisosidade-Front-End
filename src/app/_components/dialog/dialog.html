@@ -1,0 +1,88 @@
+<div class="container">
+    <h1 mat-dialog-title>{{ isEditMode ? 'Edição de Clientes' : 'Cadastro de Clientes' }}</h1>
+    <mat-dialog-content>
+        <form [formGroup]="clientForm">
+            <p class="step-title">1° Fatos e Dados</p>
+            <hr>
+
+            <mat-form-field class="full-width">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="name">
+                @if(clientForm.get('name')?.hasError('required')){
+                <mat-error>Nome é <strong>obrigatório</strong></mat-error>
+                }
+            </mat-form-field>
+
+            <div class="form-row">
+                <mat-form-field class="age-width">
+                    <mat-label>Idade</mat-label>
+                    <input matInput formControlName="age" type="number" min="18" max="100">
+                </mat-form-field>
+
+                <mat-form-field class="email-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="email">
+                    @if(clientForm.get('email')?.hasError('required')){
+                    <mat-error>Email é <strong>obrigatório</strong></mat-error>
+                    }
+                </mat-form-field>
+            </div>
+
+            <mat-form-field class="full-width">
+                <mat-label>Endereço</mat-label>
+                <input matInput formControlName="address">
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Outros</mat-label>
+                <textarea matInput formControlName="others" #message maxlength="300"></textarea>
+                <mat-hint align="end">{{message.value.length}} / 300</mat-hint>
+            </mat-form-field>
+
+            <p class="step-title">2º Interesses</p>
+            <hr>
+
+            <mat-form-field class="full-width">
+                <mat-label>Interesses</mat-label>
+                <textarea matInput formControlName="interests" #messageInterests maxlength="300"></textarea>
+                <mat-hint align="end">{{messageInterests.value.length}} / 300</mat-hint>
+                @if(clientForm.get('interests')?.hasError('required')){
+                <mat-error>Campo obrigatório</mat-error>
+                }
+            </mat-form-field>
+
+            <p class="step-title">3º Sentimentos</p>
+            <hr>
+
+            <mat-form-field class="full-width">
+                <mat-label>Sentimentos</mat-label>
+                <textarea matInput formControlName="feelings" #messageFeelings maxlength="300"></textarea>
+                <mat-hint align="end">{{messageFeelings.value.length}} / 300</mat-hint>
+                @if(clientForm.get('feelings')?.hasError('required')){
+                <mat-error>Campo obrigatório</mat-error>
+                }
+            </mat-form-field>
+
+            <p class="step-title">4º Valores</p>
+            <hr>
+
+            <mat-form-field class="full-width">
+                <mat-label>Valores</mat-label>
+                <textarea matInput formControlName="values" #messageValues maxlength="300"></textarea>
+                <mat-hint align="end">{{messageValues.value.length}} / 300</mat-hint>
+                @if(clientForm.get('values')?.hasError('required')){
+                <mat-error>Campo obrigatório</mat-error>
+                }
+            </mat-form-field>
+
+            <div class="checkbox">
+                <mat-checkbox formControlName="isActive">Ativo</mat-checkbox>
+            </div>  
+
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button class="close" (click)="onClose()">Fechar</button>
+        <button class="save" (click)="onSubmit()">Salvar</button>
+    </mat-dialog-actions>
+</div>

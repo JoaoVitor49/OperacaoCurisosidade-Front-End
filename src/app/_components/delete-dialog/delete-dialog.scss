@@ -1,0 +1,57 @@
+.container{
+    background-color: var(--bg-container-primary);
+    padding: 1rem;
+}
+
+.title, p {
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.title{
+    margin-bottom: 1rem;
+}
+
+p strong {
+    color: var(--text-link);
+}
+
+mat-dialog-actions {
+    margin-top: 0;
+    padding: 0;
+    gap: 1rem;
+
+    button {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition: all 0.3s ease; 
+
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-2px);
+        }
+    }
+
+    .cancel-button {
+        background-color: var(--bg-button-close);
+        color: var(--text-primary);
+
+        &:hover {
+            background-color: var(--bg-button-close-hover);
+        }
+    }
+
+    .confirm-button {
+        background-color: var(--bg-button-delete);
+        color: white;
+
+        &:hover {
+            background-color: var(--bg-button-delete-hover);
+        }
+    }
+}

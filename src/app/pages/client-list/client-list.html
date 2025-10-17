@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="header">
+        <span class="title"><a [routerLink]="['/report']">Relatórios</a> > Lista de Clientes</span>
+        <app-main-button label="Download" (click)="downloadClients()"></app-main-button>
+    </div>
+    <ng-template #acoesTmpl let-item>
+        <app-action-buttons-cell (edit)="baseClientService.editClient(item)" (delete)="baseClientService.deleteClient(item)"
+            [item]="item"></app-action-buttons-cell>
+    </ng-template>
+    <ng-template #statusTmpl let-item>
+        <app-status-cell [status]="item.isActive"></app-status-cell>
+    </ng-template>
+    <app-table #tableRef [columns]="baseClientService.columns" [data]="baseClientService.clients()" [totalItems]="baseClientService.totalClients()" (pageChange)="baseClientService.onPageChange($event)" (sortChange)="baseClientService.onSortChange($event)"
+        [customTemplate]="{ actions: acoesTmpl, isActive: statusTmpl }"></app-table>
+</div>

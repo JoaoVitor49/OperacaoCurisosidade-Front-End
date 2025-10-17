@@ -1,0 +1,298 @@
+@use '@angular/material' as mat;
+
+:root {
+  --blue-400: #5CCEEE;
+  --blue-500: #24C0EB;
+  --blue-600: #1CA3D1;
+
+  --purple-400: #BB86FC;
+  --purple-500: #9668D4;
+  --purple-600: #662EB1;
+
+  --gray-50: #F8F9FA;
+  --gray-100: #F5F7FA;
+  --gray-200: #F0F3F6;
+  --gray-250: #F0F3F7;
+  --gray-300: #E5E9EE;
+  --gray-400: #E5E8ED;
+  --gray-500: #D2D9E0;
+  --gray-600: #D6DDE4;
+  --gray-700: #CED4DA;
+
+  --dark-50: #454545;
+  --dark-100: #333333;
+  --dark-200: #2A2A2A;
+  --dark-300: #1E1E1E;
+  --dark-400: #121212;
+
+  --text-dark-primary: #2C3E50;
+  --text-dark-secondary: #4A5F7A;
+  --text-dark-tertiary: #4E4E4E;
+  --text-dark-muted: #4B4949;
+
+  --green-400: #50C878;
+  --green-500: #00FF7F;
+  --green-600: #3F9D2F;
+  --green-700: #358728;
+  --red-400: #FF5C5C;
+  --red-500: #FF4500;
+  --red-600: #C15959;
+  --red-700: #CC0000;
+  --yellow-400: #FFD54F;
+  --yellow-500: #FFC300;
+  --yellow-600: #FFD700;
+  --yellow-700: #FFC330;
+
+  --teal-500: #03DAC6;
+  --teal-600: #018786;
+  --indigo-400: #415996;
+  --indigo-500: #5763A0;
+  --indigo-600: #9154FA;
+  --indigo-700: #4655A0;
+  --indigo-800: #04605F;
+  --rose-500: #CF6679;
+  --rose-600: #B94056;
+
+  --white-015: rgba(255, 255, 255, 0.15);
+  --white-025: rgba(255, 255, 255, 0.25);
+  --white-080: rgba(255, 255, 255, 0.8);
+  --white-087: rgba(255, 255, 255, 0.87);
+  --black-050: rgba(0, 0, 0, 0.5);
+  --black-087: rgba(44, 62, 80, 0.87);
+}
+
+:root {
+  --bg-primary: var(--gray-400);
+  --bg-container-primary: var(--gray-100);
+  --bg-logo-sidebar: var(--blue-400);
+  --bg-button-auth: var(--blue-400);
+  --bg-button-auth-hover: var(--blue-500);
+  --bg-button-register: var(--blue-500);
+  --bg-button-register-hover: var(--blue-600);
+  --bg-button-print: var(--indigo-500);
+  --bg-button-print-hover: var(--indigo-700);
+  --bg-input: var(--gray-300);
+  --input-hover: var(--blue-600);
+
+  /* toggle-theme */
+  --bg-toggle: var(--gray-600);
+  --bg-toggle-hover: var(--gray-700);
+  --bg-toggle-icon: var(--gray-200);
+  --toggle-icon: var(--yellow-500);
+  --toggle-left-px: 3px;
+
+  /* logo-circle*/
+  --bg-logo-circle: var(--blue-400);
+  --text-logo-circle: var(--dark-400);
+
+  --border-primary: var(--gray-500);
+  --border-input: var(--blue-400);
+
+  --text-primary: var(--text-dark-primary);
+  --text-link: var(--blue-500);
+  --text-label: var(--blue-500);
+  --text-input: var(--dark-400);
+  --text-error: red;
+  --text-active: var(--green-600);
+  --text-inactive: var(--red-500);
+
+  --line-vertical: var(--gray-500);
+
+  /* menu-item */
+  --item-hover: var(--blue-400);
+  --item-border: var(--blue-600);
+  --item-text-hover: white;
+
+  /* box */
+  --box-text-primary: var(--indigo-400);
+  --box-text-secondary: var(--green-600);
+  --box-text-tertiary: var(--red-600);
+
+  /* table */
+  --bg-table: var(--gray-200);
+  --bg-table-header: var(--gray-300);
+  --bg-table-row: var(--gray-200);
+  --border-td: var(--gray-500);
+
+  /* dialog-buttons */
+  --bg-button-close: var(--gray-300);
+  --bg-button-close-hover: var(--gray-500);
+  --bg-button-save: var(--green-600);
+  --bg-button-save-hover: var(--green-700);
+
+   /* paginator */
+  --icon-disabled: var(--gray-700);
+
+  /* snackbar */
+  --bg-snackbar: white;
+  --text-snackbar: black;
+
+  --bg-button-delete: red;
+  --bg-button-delete-hover: var(--red-700);
+}
+
+[data-theme="dark"] {
+  --bg-primary: var(--dark-400);
+  --bg-container-primary: var(--dark-300);
+  --bg-logo-sidebar: var(--purple-400);
+  --bg-button-auth: var(--purple-400);
+  --bg-button-auth-hover: var(--purple-500);
+  --bg-button-register: var(--rose-500);
+  --bg-button-register-hover: var(--rose-600);
+  --bg-button-print: var(--teal-600);
+  --bg-button-print-hover: var(--indigo-800);
+  --bg-input: var(--dark-100);
+  --input-hover: var(--purple-500);
+
+  /* toggle-theme */
+  --bg-toggle: var(--white-015);
+  --bg-toggle-hover: var(--white-025);
+  --bg-toggle-icon: var(--dark-400);
+  --toggle-icon: var(--white-087);
+  --toggle-left-px: 33px;
+
+  /* logo-circle*/
+  --bg-logo-circle: var(--purple-400);
+  --text-logo-circle: var(--dark-400);
+
+  --border-primary: var(--dark-100);
+  --border-input: var(--purple-400);
+
+  --text-primary: white;
+  --text-link: var(--purple-500);
+  --text-label: var(--purple-400);
+  --text-input: white;
+  --text-error: var(--red-400);
+  --text-active: var(--green-500);
+  --text-inactive: var(--red-400);
+
+  --line-vertical: var(--dark-100);
+
+  /* menu-item */
+  --item-hover: var(--purple-400);
+  --item-border: var(--purple-600);
+  --item-text-hover: var(--dark-400);
+
+  /* box */
+  --box-text-primary: var(--indigo-600);
+  --box-text-secondary: var(--teal-500);
+  --box-text-tertiary: var(--rose-500);
+
+  /* table */
+  --bg-table: var(--dark-300);
+  --bg-table-header: var(--dark-200);
+  --bg-table-row: var(--dark-100);
+  --border-td: var(--dark-200);
+
+  /* dialog-buttons */
+  --bg-button-close: var(--dark-100);
+  --bg-button-close-hover: var(--dark-50);
+  --bg-button-save: var(--green-600);
+  --bg-button-save-hover: var(--green-700);
+
+  /* paginator */
+  --icon-disabled: var(--dark-50);
+
+  /* snackbar */
+  --bg-snackbar: var(--dark-200);
+  --text-snackbar: white;
+
+  --bg-button-delete: red;
+  --bg-button-delete-hover: var(--red-700);
+}
+
+html {
+  @include mat.form-field-overrides((filled-container-color: var(--bg-input),
+      filled-label-text-color: var(--text-label),
+      filled-input-text-color: var(--text-input),
+      filled-active-indicator-color: var(--border-input),
+      filled-focus-active-indicator-color: var(--border-input),
+      filled-focus-label-text-color: var(--text-label),
+      filled-caret-color: var(--border-input),
+      filled-hover-label-text-color: var(--input-hover),
+      filled-hover-active-indicator-color: var(--input-hover),
+
+      filled-error-label-text-color: var(--text-error),
+      filled-error-hover-label-text-color: var(--text-error),
+      filled-error-active-indicator-color: var(--text-error),
+      filled-error-hover-active-indicator-color: var(--text-error),
+      filled-error-focus-label-text-color: var(--text-error),
+      filled-error-focus-active-indicator-color: var(--text-error),
+      filled-error-caret-color: var(--text-error)));
+
+  @include mat.table-overrides((background-color: var(--bg-table),
+      header-headline-color: var(--text-primary),
+      row-item-label-text-color: var(--text-primary),
+      row-item-outline-color: var(--border-td),
+      row-item-label-text-size: 12px,
+      header-container-height: 2rem,
+      row-item-container-height: 2.75rem,
+    ));
+  @include mat.sort-overrides((arrow-color: var(--text-primary),
+    ));
+  @include mat.dialog-overrides((subhead-color: var(--text-primary),
+      actions-alignment: space-between,
+      subhead-size: 24px));
+  @include mat.checkbox-overrides((label-text-color: var(--text-primary),
+      label-text-size: 14px,
+    ));
+  @include mat.paginator-overrides((container-text-color: var(--text-primary),
+      disabled-icon-color: var(--icon-disabled),
+      container-size: 0.5rem,
+      container-text-size: 12px,
+      page-size-select-width: 3rem));
+  @include mat.select-overrides((panel-background-color: white));
+  @include mat.snack-bar-overrides((container-color: var(--bg-snackbar),
+      supporting-text-color: var(--text-snackbar),
+      supporting-text-size: 14px));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pagination.mat-mdc-paginator .mat-mdc-select-value {
+  text-align: center;
+}
+
+.pagination.mat-mdc-paginator .mat-mdc-select-arrow svg {
+  left: 0%;
+}
+
+.warning-snackbar mat-icon{
+  color: var(--yellow-500);
+}
+
+.success-snackbar mat-icon{
+  color: green;
+}
+
+.error-snackbar mat-icon{
+  color: red;
+}
+
+.mdc-dialog--open .mat-mdc-dialog-surface{
+  background-color: var(--bg-container-primary);
+  border: 2px solid var(--border-primary);
+  border-radius: 8px;
+}

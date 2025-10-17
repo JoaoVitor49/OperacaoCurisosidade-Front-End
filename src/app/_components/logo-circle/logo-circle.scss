@@ -1,0 +1,32 @@
+.container{
+    font-family: "Inter", sans-serif;
+    width: clamp(80px, 20vw, 160px);
+    height: clamp(80px, 20vw, 160px);
+    background-color: var(--bg-logo-circle);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-logo-circle);
+    transition: all 0.3s ease;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.oc{
+    font-size: clamp(15px, 3vw, 30px);
+    font-weight: 700;
+}
+
+.oc-text{
+    font-size: clamp(5px, 1.5vw, 13px);
+    font-weight: 400;
+}

@@ -1,0 +1,58 @@
+.container {
+    background-color: var(--bg-container-primary);
+    padding: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+p,
+li {
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+strong {
+    font-weight: 500;
+    color: var(--text-label);
+}
+
+.diff-title {
+    margin-top: 0.5rem;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none; 
+}
+
+.old-value {
+    color: var(--red-500);
+    text-decoration: line-through;
+}
+
+.new-value {
+    color: var(--green-700);
+    font-weight: 500;
+}
+
+.arrow {
+    margin: 0 0.5rem;
+}
+
+.close{
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--bg-button-close);
+    color: var(--text-primary);
+}
+
+.close:hover{
+    background-color: var(--bg-button-close-hover);
+    transform: translateY(-2px);
+}

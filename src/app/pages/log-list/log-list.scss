@@ -1,0 +1,18 @@
+.container{
+    background-color: var(--bg-container-primary);
+    border-radius: 8px;
+    height: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-primary);
+    overflow-y: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: var(--text-link);
+    text-decoration: underline;
+}

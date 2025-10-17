@@ -1,0 +1,5 @@
+<div class="container">
+    <span class="title">Relatórios</span>
+    <app-table [columns]="reportColumns" [data]="data" [totalItems]="total" (rowClick)="navigateToReport($event)"
+        [rowClickable]="true"></app-table>
+</div>

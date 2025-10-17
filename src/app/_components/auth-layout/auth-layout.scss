@@ -1,0 +1,27 @@
+.body{
+    background-color: var(--bg-primary);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--bg-container-primary);
+    border: 2px solid var(--border-primary);
+    border-radius: 8px;
+    width: 50vw;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-toggle-theme{
+    align-self: flex-end;
+}
+
+.content{
+    margin-top: 1rem;
+    width: 80%;
+}

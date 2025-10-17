@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 mat-dialog-title>Log Detalhado</h1>
+    <mat-dialog-content>
+        <p><strong>Data:</strong> {{ log().timeDate | date: "dd/MM/yyyy - HH:mm:ss" }}</p>
+        <p><strong>Usuário:</strong> {{ log().userEmail }}</p>
+        <p><strong>Ação:</strong> {{ log().action }}</p>
+
+        @if(differences().length > 0){
+        <p class="diff-title"><strong>Alterações nos dados:</strong></p>
+        <ul>
+            @for(diff of differences(); track diff.field){
+            <li>
+                <strong>- {{ diff.field | fieldName }}: </strong>
+                @if (diff.field === 'isActive') {
+                <span class="old-value">{{ diff.oldValue | status }}</span>
+                <span class="arrow">→</span>
+                <span class="new-value">{{ diff.newValue | status }}</span>
+                } @else {
+                <span class="old-value">{{ diff.oldValue }}</span>
+                <span class="arrow">→</span>
+                <span class="new-value">{{ diff.newValue }}</span>
+                }
+            </li>
+            }
+        </ul>
+        }
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button class="close" (click)="onClose()">Fechar</button>
+    </mat-dialog-actions>
+</div>

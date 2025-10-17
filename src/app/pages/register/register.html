@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="header">
+        <div class="title">Cadastro</div>
+        <app-main-button label="Novo Cadastro" (click)="openDialog()"></app-main-button>
+    </div>
+    <ng-template #acoesTmpl let-item>
+        <app-action-buttons-cell (edit)="baseClientService.editClient(item)" (delete)="baseClientService.deleteClient(item)"
+            [item]="item"></app-action-buttons-cell>
+    </ng-template>
+    <ng-template #statusTmpl let-item>
+        <app-status-cell [status]="item.isActive"></app-status-cell>
+    </ng-template>
+    <app-table #tableRef [columns]="baseClientService.columns" [data]="baseClientService.clients()" [totalItems]="baseClientService.totalClients()"
+        [customTemplate]="{ actions: acoesTmpl, isActive: statusTmpl }" (pageChange)="baseClientService.onPageChange($event)" (sortChange)="baseClientService.onSortChange($event)"></app-table>
+</div>

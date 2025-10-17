@@ -1,0 +1,4 @@
+<div class="container">
+    <span class="title"><a [routerLink]="['/report']">Relatórios</a> > Lista de Logs</span>
+    <app-table [columns]="columns" [data]="logs()" [totalItems]="totalLogs()" (pageChange)="onPageChange($event)" [rowClickable]="true" (rowClick)="onRowClick($event)"></app-table>
+</div>

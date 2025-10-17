@@ -1,0 +1,8 @@
+<button type="submit" [disabled]="isLoading()">
+    @if(isLoading()){
+        {{ loadingLabel() }}
+    }
+    @else{
+        {{ label() }}
+    }
+</button>
